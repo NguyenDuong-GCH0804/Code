@@ -1,0 +1,133 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+.title{
+    font-weight: bold;
+    font-size: 35px;
+    color: red;
+}
+
+/* Banner */
+.banner{
+    height: 250px;
+}
+.banner-img{
+    width: 100%;
+    height: 100%;
+}
+/* Header */
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #171701;
+    height: 60px;
+}
+.header-item{
+    padding: 0 10px;
+    cursor: pointer;
+    margin: 0 60px;
+}
+.header-link{
+    line-height: 60px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ebebd3;
+}
+.header-link:hover{
+    color: #d4d417;
+}
+/* Home */
+#Home{
+    background-image: url(/image/Background-Home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+}
+
+.home-introduce{
+    position: absolute;
+    right: 15%;
+    top: 40%;
+    text-align: center;
+}
+
+.introduce{
+    font-style: italic;
+    font-size: 16px;
+    color: #6e6d6d;
+    margin: 8px 0;
+}
+.description{
+    font-size: 17px;
+    color: #454444;
+}
+/* About */
+#About{
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+}
+
+.About-content{
+    text-align: center;
+    margin: auto;
+}
+
+
+.About-description{
+    margin: 16px 20% 10px;
+    font-size: 18px;
+    font-weight: 530;
+    line-height: 25px;
+}
+
+.About-thanks{
+    font-size: 18px;
+    font-style: italic;
+}
+
+.About-img{
+    text-align: center;
+}
+
+/* Map */
+#Map{
+    height: 500px;
+    width: 100%;
+}
+/* Contact */
+#Contact{
+   height: 500px;
+   display: flex;
+   justify-content: space-between;
+   position: relative;
+}
+
+.Contact-img{
+    height: 500px;
+    margin-left: 50px;
+}
+.Contact-content{
+    margin: auto;
+    text-align: center;
+}
+.Contact-text{
+    font-size: 25px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+.contact-item{
+    margin-top: 10px;
+    list-style: none;
+    font-weight: bold;
+    color: black;
+}

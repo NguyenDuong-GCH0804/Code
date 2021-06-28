@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.title{
+    font-weight: bold;
+    font-size: 35px;
+    color: red;
+    margin: 30px 0px;
+    text-align: center;
+}
+a{
+    text-decoration: none !important;
+    color: black !important;
+}
+a:hover{
+    color: red !important;
+}
+.textError{
+    font-size: 12px;
+    color: red;
+}
+/* Banner */
+.banner{
+    height: 250px;
+}
+.banner-img{
+    width: 100%;
+    height: 100%;
+}
+.header-link{
+    line-height: 60px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ebebd3 !important;
+}
+.header-link:hover{
+    color: #d4d417 !important;
+}
+/* Login */
+.header-login{
+    background-color: #171701;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+.form-login{
+    margin: 80px 0 150px;
+    text-align: center;
+}
+.form{
+    width: fit-content;
+    margin: auto;
+}
+.input{
+    margin: 10px 5px;
+}
+.label{
+    padding: 0 5px;
+}
+/* Table */
+.manager{
+    margin: 30px 50px 250px;
+}
+.Add-Search{
+    display: flex;
+    justify-content: space-around;
+}
+
+td{
+    text-align: center;
+}
+
+th{
+    text-align: center !important;
+}

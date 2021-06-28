@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/manager.css">
+    <title>Login Admin</title>
+</head>
+<body>
+    <div class="banner">
+        <img src="image/Banner_Toy.jpg" alt="Toy" class="banner-img">
+    </div>
+    <header class="header-login">
+        <div >
+            <a href="/" class="header-link" >Home</a>
+        </div>
+        </div>
+    </header>
+    <div class="form-login">
+        <form action="/manager" method="post" class="form">
+        <fieldset>
+            <div class="title">Login</div>
+            <span class="label">Username</span> 
+            <input type="text" name="txtName" class="input">
+            <br>
+            <span class="textError">{{nameError}}</span>
+            <br>
+            <span class="label"> Password</span> 
+            <input type="password" name="txtPassword" class="input">
+            <br>
+            <span class="textError">{{passError}}</span>
+            <br>
+            <input type="submit" value="Login" class="input">
+            <br>
+            <span class="textError">{{msg}}</span>
+        </fieldset>
+    </form>
+    </div>
+</body>
+</html>

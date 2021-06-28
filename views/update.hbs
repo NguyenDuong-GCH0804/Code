@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/manager.css">
+    <title>Update Product</title>
+</head>
+<body>
+        <div class="banner">
+        <img src="image/Banner_Toy.jpg" alt="Toy" class="banner-img">
+    </div>
+    <header class="header-login">
+        <div >
+            <a href="/" class="header-link" >Home</a>
+        </div>
+        <div >
+            <a href="/login" class="header-link" >Manager</a>
+        </div>
+        <div >
+            <a href="/logout" class="header-link" >Logout</a>
+        </div>
+    </header>
+    <div class="title">
+        Welcome {{name}}
+    </div>
+    <div class="form-login">
+        <form action="/edit" method="post" class="form">
+        <fieldset>
+            <div class="title">Update Product</div>
+            <input type="hidden" name="id" value="{{Product._id}}" placeholder="ID">
+            <input type="text" name="txtName" class="input" value="{{Product.Name}}" placeholder="Name">
+            <br>
+            <span class="textError">{{nameError}}</span>
+            <br>
+            <input type="text" name="txtCategory" class="input" value="{{Product.Category}}" placeholder="Category">
+            <br>
+            <span class="textError">{{categoryError}}</span>
+            <br>
+            <input type="text" name="txtPrice" class="input" value="{{Product.Price}}" placeholder="Price">
+            <br>
+            <span class="textError">{{priceError}}</span>
+            <br>
+            <input type="submit" value="Update" class="input">
+        </fieldset>
+    </form>
+    </div>
+</body>
+</html>
