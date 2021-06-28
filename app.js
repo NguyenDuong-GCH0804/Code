@@ -66,7 +66,10 @@ app.post('/search', async(req,res)=>{
     res.render('manager',{name:req.session.username, model:results})
 })
 
-app.get('/add',(req,res)=>{;
+app.get('/add',(req,res)=>{
+    if(req.session.username == null){
+        res.render('login', {msg:"", nameError:"", passError:""})
+    }else
     res.render('add',{name:req.session.username, nameError:'', categoryError:'', priceError:''})
 })
 
@@ -118,16 +121,26 @@ app.post('/insert', async(req,res)=>{
 })
 
 app.get('/delete', async(req,res)=>{
-    const id = req.query.id;
-    await dbHandler.deleteProduct(id);
-    res.redirect('login')
+    if(req.session.username == null){
+        res.render('login', {msg:"", nameError:"", passError:""})
+    }
+    else{
+        const id = req.query.id;
+        await dbHandler.deleteProduct(id);
+        res.redirect('login')
+    }
 })
 
 app.get('/update', async(req,res)=>{
-    const id = req.query.id;
-    const results = await dbHandler.findbyID(id);
-    res.render('update',{Product:results, name:req.session.username,
-                        nameError:'', categoryError:'', priceError:''})
+    if(req.session.username == null){
+        res.render('login', {msg:"", nameError:"", passError:""})
+    }
+    else{
+        const id = req.query.id;
+        const results = await dbHandler.findbyID(id);
+        res.render('update',{Product:results, name:req.session.username,
+                            nameError:'', categoryError:'', priceError:''})
+    }
 })
 
 app.post('/edit', async(req,res)=>{
