@@ -52,7 +52,7 @@ async function updateProduct(id, updateProduct){
     var ObjectID = require('mongodb').ObjectID;
     let condition = {"_id" : ObjectID(id)};
     const dbo = await getDbo();
-    await  dbo.collection("Product").update(condition, updateProduct);
+    await  dbo.collection("Product").updateOne(condition, updateProduct);
 }
 
 module.exports = {checkUser, searchProduct, addProduct, deleteProduct, findbyID, updateProduct}
